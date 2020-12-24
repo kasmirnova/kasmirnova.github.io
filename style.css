@@ -1,0 +1,183 @@
+*
+{
+	padding: 0;
+	margin: 0;
+}
+body{
+  margin:0;
+  text-align:center;
+  font-family: Verdana;
+  background:#f5f5f5;
+}
+h1 {
+  text-align:center;
+}
+b{
+	color: red;
+}
+.container {
+  margin:0 auto;
+  border:1px solid black;
+  height: 92vh;
+  overflow: hidden;
+}
+input[type="radio"] {
+    display:none;
+}
+label {
+  width:32%;
+  float:left;
+  text-align:center;
+  background:#ffffff;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  color:#222222;
+  padding:0.5%;
+  margin-bottom:30px;
+  cursor:pointer;
+}
+input[type="radio"][id="pirog"]:checked + label {
+  background:orange;
+}
+input[type="radio"][id="pirog"]:checked ~ .tort, input[type="radio"][id="pirog"]:checked ~ .piroj,
+input[type="radio"][id="pirog"]:checked ~ .sir,input[type="radio"][id="pirog"]:checked ~ .rul
+{
+  width:0;
+  height:0;
+  padding:0;
+  margin:0;
+  opacity:0;
+}
+input[type="radio"][id="tort"]:checked + label {
+  background:orange;
+}
+input[type="radio"][id="tort"]:checked ~ .pirog, input[type="radio"][id="tort"]:checked ~ .piroj,
+input[type="radio"][id="tort"]:checked ~ .sir,input[type="radio"][id="tort"]:checked ~ .rul {
+  width:0;
+  height:0;
+  padding:0;
+  margin:0;
+  opacity:0;
+}
+input[type="radio"][id="rul"]:checked + label {
+  background:orange;
+}
+input[type="radio"][id="rul"]:checked ~ .pirog, input[type="radio"][id="rul"]:checked ~ .piroj,
+input[type="radio"][id="rul"]:checked ~ .tort,input[type="radio"][id="rul"]:checked ~ .sir {
+  width:0;
+  height:0;
+  padding:0;
+  margin:0;
+  opacity:0;
+}
+input[type="radio"][id="sir"]:checked + label {
+  background:orange;
+}
+input[type="radio"][id="sir"]:checked ~ .pirog, input[type="radio"][id="sir"]:checked ~ .piroj,
+input[type="radio"][id="sir"]:checked ~ .tort,input[type="radio"][id="sir"]:checked ~ .rul {
+  width:0;
+  height:0;
+  padding:0;
+  margin:0;
+  opacity:0;
+}
+input[type="radio"][id="piroj"]:checked + label {
+  background:orange;
+}
+input[type="radio"][id="piroj"]:checked ~ .pirog, input[type="radio"][id="piroj"]:checked ~ .rul,
+input[type="radio"][id="piroj"]:checked ~ .tort,input[type="radio"][id="piroj"]:checked ~ .sir {
+  width:0;
+  height:0;
+  padding:0;
+  margin:0;
+  opacity:0;
+}
+#slider-range
+{
+	position: relative;
+	width: 50%;
+	margin-bottom: 10px;
+	margin-left: auto;
+	margin-right: auto;
+}
+.ui-slider .ui-slider-handle {
+border-radius: 15px;
+background: #ffd400!important;
+border:0!important;
+	}
+.ui-slider-range
+{
+	background-color: darkblue!important;
+}
+.ui-widget-header
+{
+	background: darkblue!important;
+}
+.tile {
+  width:400px;
+  height:300px;
+  float:left;
+  transition:all 1s;
+  border:1px solid darkgrey;
+  border-radius: 5px;
+  margin: 1%;
+}
+.tile>img
+{
+	width: 60%;
+	height: 80%;	
+}
+.tile>h5
+{
+	float: right;
+}
+.tile:hover
+{
+	box-shadow:0 0 15px rgba(0,0,0,0.6);
+}
+.riltog
+{
+	position: absolute;
+	margin-right: auto;
+	margin-left: 20px;
+}
+footer>h4
+{
+	text-align: right;
+	margin-right: 20px;
+}
+/*  MEDIA */
+@media (max-width: 766px)
+{
+.container
+{
+	overflow: scroll;
+}
+.tile
+{
+	width: 300px;
+	height: 200px;
+	margin-left: 10%;
+}
+	.outpr
+	{
+		display: none;
+	}
+}
+
+@media (max-width: 1200px) and (min-width: 730px)
+{
+	.tile 
+	{
+		display: inline-block;
+		width: 350px;
+		margin-left: 15px;
+	}
+	.outpr
+	{
+		display: none;
+	}
+	.container
+	{
+		overflow: scroll;
+	}
+}

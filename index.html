@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<link rel="stylesheet" href="style.css">
+	<!-- 1. Подключим библиотеку jQuery (без нее jQuery UI не будет работать) -->
+<script src="jquery.js"></script>
+<!-- 2. Подключим jQuery UI -->
+<link href="jquery-ui.min.css" rel="stylesheet" type="text/css"/>
+<script src="jquery-ui.min.js"></script>
+</head>
+<body>
+	<div class="main">
+		<h1>Тортики <b>&</b> Тістечка</h1>
+<div class="container"> 
+  <input type="radio" id="pirog" name="food" />
+  <label for="pirog">Пирог</label>
+  <input type="radio" id="tort" name="food"/>
+  <label for="tort">Торт</label>
+  <input type="radio" id="piroj" name="food"/>
+  <label for="piroj">Пироженое</label>
+  <input type="radio" id="sir" name="food"/>
+  <label for="sir">Сырник</label>
+  <input type="radio" id="rul" name="food"/>
+  <label for="rul">Рулет</label>
+  <input type="radio" id="reset" name="food"/>
+  <label for="reset">Сбросить</label>
+<div class="outpr">
+<input class="ranger form-control" name="kkk" id="kkk">
+<div id="slider-range"></div>
+</div>
+  <div class="tile pirog"><img src="pirog.jpg" alt="">
+  	<h5>PIROGT</h5>  	
+  	<p>324324-kk</p>
+  </div>
+  <div class="tile tort"><img src="tort.jpg" alt="">
+  	<h5>TORT</h5>  	
+  	<p>324324-kk</p>
+  </div>
+  <div class="tile piroj"><img src="piroj.jpg" alt="">
+  	<h5>PIROJENOE</h5>  	
+  	<p>324324-kk</p>
+  </div>
+  <div class="tile sir"><img src="sir.jpg" alt="">
+  	<h5>SIRNIK</h5>  	
+  	<p>324324-kk</p>
+  </div>
+  <div class="tile rul"><img src="rul.jpg" alt="">
+  	<h5>RULETIK</h5>  	
+  	<p>324324-kk</p>
+  </div>
+</div>
+<footer>
+	<div class="riltog">
+		<h4>Contact's:</h4>
+		<p>000-000-00-00</p>
+	</div>
+	<h4>@Smakota</h4>
+</footer>
+	</div>
+	<!--СКРИПТ ДЛЯ ПОЛЗУНКА -->
+	<script>
+		$(function(){
+ 
+ $( "#slider-range" ).slider({
+ range: true,
+ min: 0,
+ max: 1000,
+ values: [ 75, 700 ],
+ slide: function( event, ui ) {
+ $( "#kkk" ).val( " " + ui.values[ 0 ] + "-" + ui.values[ 1 ] +"Kk" );
+ }
+ });
+ $( "#kkk" ).val( " " + $( "#slider-range" ).slider( "values", 0 ) +
+ " - " + $( "#slider-range" ).slider( "values", 1 )+"Kk" );
+ 
+});
+	</script>
+</body>
+</html>
